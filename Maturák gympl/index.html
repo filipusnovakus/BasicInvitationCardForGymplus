@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="cs-cz">
+    <head>
+        <meta charset="utf-8" />
+        <title>Pozvánka na Stužovák</title>
+    </head>
+<style>
+  .body{
+    overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+  .mainimg{
+    overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.wrapper{
+    position:absolute;
+bottom: 5%;
+left: 20%;
+}
+
+a{
+  display: block;
+  width: 600px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 58px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+}
+
+a span{
+  position: relative;
+  z-index: 2;
+}
+
+a:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #ff003b;
+  transition: all .35s;
+}
+
+a:hover{
+  color: #fff;
+}
+
+a:hover:after{
+  width: 100%;
+}
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+
+}
+
+.fall {
+  animation: falling 2s;
+}
+
+@keyframes falling {
+  from{
+    transform: rotate(0) translateY(0);
+  }
+  to{
+    transform: rotate(360deg) translateY(110%);
+  }
+}
+</style>
+
+    <body class="mainimg" style="background-image: url('Stuzkovak_pozvanka.png'); position: static;">
+
+
+
+        
+<p class = "monke">
+
+<div  style="text-align: center;" class="wrapper">
+<a href="https://facebook.com/events/s/stuzkovak-4b-202223/901530390807413/"
+><span>Klikni zde!</span></a>
+
+</p>
+
+
+</div>
+
+
+  
+
+<script>
+  let count = 10
+  const falling = async (count) => {
+    for(let i = 0; i > count; i++) {
+      fallOne()
+      sleep(rndInt(200,500))
+    }
+  }
+
+  const fallOne = async () => {
+    let element = document.createElement("img")
+    element.src = "Academy_Award_trophy.png"
+    element.classList.add
+    document.appendChild(element)
+    sleep(2000)
+    document.removeChild(element)
+  }
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  const rndInt = (min, max) => {return Math.floor(Math.random() * max) + min}
+</script>
+    </body>
+   
+   
+</html>
